@@ -7,7 +7,7 @@ All prompts and responses stay on your machine—no external API calls or token 
 
 ## Features
 
-- Local LLM via Ollama (Mistral by default; easily switch to Llama 3, Phi‑3, etc.)
+- Local LLM via Ollama (Phi-3 by default; easily switch to Llama 3, Mistral, etc.)
 - FastAPI backend with a `/chat` endpoint that forwards prompts to Ollama and returns clean JSON
 - HTML/CSS/JS chat UI served by FastAPI at `/` (no separate frontend build)
 - Basic chat history in the browser (messages stay in the page)
@@ -25,14 +25,14 @@ Install Ollama from the official site and make sure this works in a terminal:
 ollama --version
 ```
 
-Then pull at least one model (e.g., Mistral):
+Then pull at least one model (e.g., Phi-3):
 ```
-ollama pull mistral
+ollama pull phi3
 ```
 
 You should be able to test:
 ```
-ollama run mistral
+ollama run phi3
 ```
 
 Type something and confirm the model replies, then exit with `Ctrl + C`.
@@ -72,7 +72,7 @@ pip install fastapi uvicorn requests python-dotenv
 
 ### 1. Ensure the model exists in Ollama
 ```
-ollama pull mistral
+ollama pull phi3
 ```
 
 ### 2. Run the FastAPI server
