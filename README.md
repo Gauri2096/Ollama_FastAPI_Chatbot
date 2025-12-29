@@ -42,26 +42,27 @@ Type something and confirm the model replies, then exit with `Ctrl + C`.
 ## Setup
 
 ### 1. Clone the repository
+```
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
+```
 
 ### 2. Create and activate virtual environment
 
 **Windows (PowerShell):**
-
+```
 python -m venv .venv
 .venv\Scripts\activate
-
+```
 **macOS / Linux:**
-
+```
 python -m venv .venv
 source .venv/bin/activate
-
+```
 ### 3. Install dependencies
-
+```
 pip install fastapi uvicorn requests python-dotenv
-
-text
+```
 
 (You can omit `python-dotenv` if you’re not using a `.env` file.)
 
@@ -70,18 +71,16 @@ text
 ## Running the app
 
 ### 1. Ensure the model exists in Ollama
-
+```
 ollama pull mistral
-
-text
+```
 
 ### 2. Run the FastAPI server
 
 From the project folder with the virtualenv activated:
-
+```
 uvicorn main:app --reload
-
-text
+```
 
 You should see logs like:
 
@@ -94,16 +93,12 @@ In your browser, go to:
 
 http://localhost:8000/
 
-text
-
 - Type a message in the input box and press **Enter** or click **Send**.
 - The UI calls `GET /chat?prompt=...`, FastAPI forwards the prompt to Ollama, and the response appears as chat bubbles.
 
 You can also test the raw API directly:
 
 http://localhost:8000/chat?prompt=hello
-
-text
 
 This returns JSON with the model’s answer and token counts.
 
