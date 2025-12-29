@@ -43,8 +43,8 @@ Type something and confirm the model replies, then exit with `Ctrl + C`.
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/Gauri2096/Ollama_FastAPI_Chatbot.git
+cd Ollama_FastAPI_Chatbot
 ```
 
 ### 2. Create and activate virtual environment
